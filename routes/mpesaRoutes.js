@@ -10,4 +10,10 @@ router.get(
   mpesaController.showToken
 );
 
+router.post(
+  "/lipaNaMPESA",
+  mpesaController.getAccessToken,
+  mpesaController.lipaNaMPESA
+);
+
 module.exports = router;

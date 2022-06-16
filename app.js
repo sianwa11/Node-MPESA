@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 
 const mpesaRoutes = require("./routes/mpesaRoutes");
+const webhookRoutes = require("./routes/webhookRoutes");
 
 const app = express();
 
@@ -16,5 +17,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/", mpesaRoutes);
+app.use("/hooks/", webhookRoutes);
 
 module.exports = app;
